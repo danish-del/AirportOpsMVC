@@ -1,0 +1,32 @@
+﻿@model IEnumerable<AirportOpsMVC.Dto.TerminalGateDto.ResponseTerminalGateDto>
+
+<h2>Dashboard TerminalGate</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>TerminalId</th>
+            <th>GateNumber</th>
+            <th>IsActive</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var terminal in Model)
+        {
+            <tr>
+                <td>@terminal.Id</td>
+                <td>@terminal.TerminalId</td>
+                <td>@terminal.GateNumber</td>
+                <td>@terminal.IsActive</td>
+                <td>
+                    <a asp-action="Edit"
+                    asp-route-id="@terminal.Id" class="btn btn-warning">Update</a>
+                    <a asp-action="Delete"
+                    asp-route-id="@terminal.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>                

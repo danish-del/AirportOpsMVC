@@ -1,0 +1,20 @@
+﻿@model AirportOpsMVC.Dto.TerminalGateDto.ResponseTerminalGateDto
+
+<h2>Delete TerminalGate</h2>
+<h4>Are you Sure you want to Delete this?.</h4>
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id"/>
+    <div class="mb-3">
+        <strong>Id</strong> @Model.Id
+    </div>
+    <div class="mb-3">
+        <srong>TerminalId</srong> @Model.TerminalId
+    </div>
+    <div class="mb-3">
+        <strong>GateNumber</strong> @Model.GateNumber
+    </div>
+    <div class="mb-3">
+        <strong>IsActive</strong> @Model.IsActive
+     </div>
+     <button type="submit" class="btn btn bg-danger">Delete</button>
+</form>

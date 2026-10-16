@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+<h2>Dashboard</h2>
+<div class="col-md-3 col-mb-3">
+    <div class="p-3">
+        <h5>Airline Count </h5>
+
+        <h3>@ViewBag.AirlineCount</h3>
+        <a asp-controller="Airline"
+           asp-action="Index"
+           class="btn btn-primary">View Airlines</a>
+    </div>
+</div>
+<div class="col-md-3 col-mb-3">
+    <div class="p-3">
+        <h5>Airport Count</h5>
+        <h3>@ViewBag.AirportCount</h3>
+        <a asp-controller="Airport"
+           asp-action="Index"
+           class="btn btn-primary">View Airport</a>
+    </div>
+</div>
+<div class="col-md-3 col-mb-3">
+    <div class="p-3">
+        <h5>Terminal Count</h5>
+        <h3>@ViewBag.TerminalCount</h3>
+        <a asp-controller="Terminal"
+           asp-action="Index"
+           class="btn btn-primary">View Terminal</a>
+    </div>
+</div>
+<div class="col-md-3  col-mb-3">
+    <div class="p-3">
+        <h5>Terminal Count</h5>
+        <h3>@ViewBag.TerminalCount</h3>
+        <a asp-controller="Terminal"
+           asp-action="Index"
+           class="btn btn-primary">View Terminal</a>
+    </div>
+</div>
+<div class="col-md-3 col-mb-3">
+    <div class="p-3">
+        <h5>TerminalGate</h5>
+        <h3>@ViewBag.TerminalGate</h3>
+        <a asp-controller="TerminalGate"
+           asp-action="Index" class="btn btn-primary">View TerminalGate</a>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+﻿@model AirportOpsMVC.Dto.Terminal.ResponseTerminalDto
+<h2>Create Terminal</h2>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="AirportId"></label>
+        <input asp-for="AirportId" />
+        <span asp-validation-for="AirportId" typeof="number"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="IsActive"></label>
+        <input asp-for="IsActive" />
+        <span asp-validation-for="IsActive"></span>
+    </div>
+
+    <button type="submit">Create</button>
+
+
+</form>
+

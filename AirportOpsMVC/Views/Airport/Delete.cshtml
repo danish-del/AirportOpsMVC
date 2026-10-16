@@ -1,0 +1,34 @@
+﻿@model AirportOpsMVC.Dto.Airport.ResponseAirportDto
+
+<form asp-action="DeleteConfirmed" method="post">
+<input type="hidden" asp-for="Id"/> 
+    <h2>Delete Airport</h2>
+
+    <h4>Are you Sure you want to Delete this?</h4>
+
+    <div class="mb-3">
+        <strong>Name:</strong> @Model.Name
+    </div>
+
+    <div class="mb-3">
+        <strong>Code:</strong> @Model.Code
+    </div>
+
+    <div class="mb-3">
+        <strong>City:</strong> @Model.City
+    </div>
+
+    <div class="mb-3">
+        <strong>Country:</strong> @Model.Country
+    </div>
+
+    <div class="mb-3">
+        <strong>IsActive:</strong> @Model.IsActive
+    </div>
+
+
+
+    <button type="submit" class="btn btn-danger">Delete</button>
+
+
+</form>

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<AirportOpsMVC.Dto.Airport.ResponseAirportDto>
+<h2>Dashboard Airport</h2>
+<table class="table">
+
+
+
+   <thead>
+    <tr>
+     <th>Id</th>
+     <th>Name</th>
+     <th>Code</th>
+     <th>Country</th>
+     <th>City</th>
+     <th>IsActive</th>
+     <th>Actions</th>
+
+    </tr>
+
+    </thead>
+
+
+    <tbody>
+        @foreach (var airport in Model)
+        {
+            <tr>
+                <td>@airport.Id</td>
+                <td>@airport.Name</td>
+                <td>@airport.Code</td>
+                <td>@airport.Country</td>
+                <td>@airport.City</td>
+                <td>@airport.IsActive</td>
+             
+             <td>
+             <a asp-action="Edit"
+             asp-route-id="@airport.Id" class="btn btn-warning">Edit</a>
+             <a asp-action="Delete"
+             asp-route-id="@airport.Id" class="btn btn-danger">Delete</a>
+         
+              </td>
+            </tr>
+        }
+    </tbody>
+    </table>
+
+
+

@@ -1,0 +1,23 @@
+﻿@model AirportOpsMVC.Dto.TerminalGateDto.CreateTerminalGateDto
+
+<h2>Create TerminalGate</h2>
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="TerminalId"></label>
+        <input asp-for="TerminalId"/>
+        <span asp-validation-for="TerminalId"></span>
+    </div>
+
+    <div>
+        <label asp-for="GateNumber"></label>
+        <input asp-for="GateNumber"/>
+        <span asp-validation-for="GateNumber"></span>
+    </div>
+    <div>
+        <label asp-forIsActive></label>
+        <input asp-for="IsActive"/>
+        <span asp-validation-for="IsActive"></span>
+    </div>
+    <button type="submit">Create</button>
+
+</form>

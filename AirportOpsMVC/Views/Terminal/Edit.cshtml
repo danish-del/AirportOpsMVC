@@ -1,0 +1,28 @@
+﻿@model AirportOpsMVC.Dto.Terminal.UpdateTerminalDto
+<h2>Edit Terminal</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id"/>
+
+    <div class="mb-3">
+        <label asp-for="Id" class="form-label"></label>
+        <input asp-for="Id" class="form-control"/>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="AirportId" class="form-label"></label>
+        <input asp-for="AirportId" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name"/ class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="IsActive" class="form-label"></label>
+        <input asp-for="IsActive" class="form-control"/>
+    </div>
+<button type="submit">Edit</button>
+
+
+
+</form>
