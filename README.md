@@ -1,89 +1,86 @@
 **✈️ AirportOpsMVC**
 Airport Operations Management System
-A web-based Airport Operations Management System built with ASP.NET Core MVC and .NET 8, designed with a layered architecture to support maintainable, secure, and scalable application development.
-
-The project follows the Repository Pattern and Service Layer architecture, with authentication, data transfer objects, and a dashboard for organizing application functionality.
+AirportOpsMVC is an airport operations web application built with ASP.NET Core MVC and .NET 8. The project uses a layered architecture to organize application logic, data access, authentication, and user interface components.
 
 🚀 Features
-ASP.NET Core MVC — Structured Model-View-Controller architecture.
-Repository Pattern — Separates data access logic from application logic.
-Service Layer — Keeps business logic organized and maintainable.
-Authentication & Authorization — JWT authentication and ASP.NET Core Identity integration.
-Data Transfer Objects (DTOs) — Controls data transfer between application layers.
-Dashboard — Centralized interface for accessing application functionality.
-Dependency Injection — Supports loosely coupled components.
+ASP.NET Core MVC — Model-View-Controller architecture.
+Repository Pattern — Separation of data access logic.
+Service Layer — Organized business logic.
+ASP.NET Core Identity — Identity and account management.
+JWT Authentication — Token-based authentication.
+Data Transfer Objects (DTOs) — Structured data transfer between application layers.
+Dashboard — Centralized interface for application functionality.
+Dependency Injection — Loosely coupled components.
 Razor Views — Server-rendered user interface.
-.NET 8 — Built on Microsoft's modern .NET platform.
 🛠️ Technology Stack
+C#
+ASP.NET Core MVC
+.NET 8
+ASP.NET Core Identity
+JSON Web Tokens (JWT)
+Repository Pattern
+Service Layer
+DTOs
+HTML, CSS, and JavaScript
+Entity Framework Core and SQL Server can be listed here if they are part of the actual implementation.
 
-Technology	Purpose
-C#	Backend programming
-ASP.NET Core MVC	Web application framework
-.NET 8	Application runtime
-Entity Framework Core	ORM, if configured
-ASP.NET Core Identity	User and account management
-JWT	Token-based authentication
-Repository Pattern	Data access abstraction
-Service Layer	Business logic organization
-DTOs	Data transfer
-SQL Server	Database, if configured
-HTML, CSS, JavaScript	Frontend development
-🏗️ Architecture
-The application uses a layered design to separate responsibilities and improve maintainability.
+🏗️ Project Architecture
+The application separates responsibilities into different components:
 
-Controllers — Handle incoming HTTP requests and coordinate application operations.
-Models — Represent application data and domain entities.
-DTOs — Define data structures exchanged between application layers.
+Controllers — Handle HTTP requests and coordinate application operations.
+Models — Represent application data.
+DTOs — Define data transfer structures.
 Repositories — Encapsulate data access operations.
-Services — Implement business logic and coordinate repository operations.
+Services — Organize business logic.
 Views — Render the user interface using Razor.
-Authentication — Manages identity and token-based authentication according to the application's configuration.
+Authentication — Supports Identity and JWT-based authentication according to the configured implementation.
 📋 Prerequisites
-Before running the project, make sure you have:
-
 .NET 8 SDK
-Visual Studio 2022 with the ASP.NET and web development workload, or a compatible code editor
-SQL Server and SQL Server Management Studio, if the project uses SQL Server
+Visual Studio 2022 with the ASP.NET and web development workload, or a compatible editor
 Git
+SQL Server, if required by the application
 ⚙️ Installation and Setup
-1. Clone the repository
+1. Clone the Repository
 
 git clone https://github.com/danish-del/AirportOpsMVC.git
 cd AirportOpsMVC
-2. Restore dependencies
+2. Restore Dependencies
 Open the solution in Visual Studio or run:
 
 
 dotnet restore
-3. Configure the database
-Configure your database connection using User Secrets or environment variables. Apply the connection settings required by your project.
+3. Configure Application Settings
+Configure the database connection and authentication settings according to your local environment.
 
-Do not commit database passwords, JWT signing keys, or other sensitive credentials to source control.
+Use ASP.NET Core User Secrets or environment variables to store sensitive configuration values during development.
 
-4. Apply database migrations
+Never commit database passwords, JWT signing keys, API keys, or private connection strings to GitHub.
+
+4. Apply Database Migrations
 If Entity Framework Core migrations are configured, run:
 
 
 dotnet ef database update
-If the EF Core CLI tool is not installed, install it according to the official .NET documentation.
+5. Run the Application
+Navigate to the directory containing the web project's .csproj file, then run:
 
-5. Run the application
 
 dotnet run
-Open the local URL displayed in the terminal to access the application.
+Open the local URL displayed in the terminal.
 
-🔐 Security Notes
-Keep database credentials and JWT signing keys outside the repository.
-Use secure secret storage for development and production.
-Configure token validation, expiration, and signing appropriately.
+🔐 Security
+Keep credentials and signing keys out of source control.
+Use secure configuration for development and production.
+Validate JWT tokens and configure appropriate expiration policies.
 Use HTTPS for secure communication.
-Apply authorization policies to protected resources.
-🎯 Project Goals
-Apply clean separation of concerns in an ASP.NET Core MVC application.
-Practice Repository Pattern and Service Layer implementation.
-Integrate authentication and identity management.
-Improve maintainability through DTOs and dependency injection.
-Build a foundation for airport operations management functionality.
+Apply authorization checks to protected endpoints.
+Never publish real passwords or private connection strings in documentation.
+🎯 Project Objectives
+Apply layered architecture in an ASP.NET Core MVC application.
+Implement the Repository Pattern and Service Layer.
+Integrate identity management and authentication.
+Organize application data using DTOs.
+Build a maintainable foundation for airport operations management.
 🗺️ Future Enhancements
 Potential improvements, depending on project requirements:
 
@@ -92,11 +89,11 @@ Airport staff and role management
 Passenger and booking management
 Reporting and analytics
 Automated testing
-Deployment to a cloud hosting platform
+Cloud deployment
 👨‍💻 Author
-Danish
+Danish Kumar Mehra
 
 GitHub: @danish-del
 
 📄 License
-No license has been specified yet. Add a suitable license if you intend to distribute or reuse this project publicly.
+No license has been specified for this project yet. A suitable license can be added if the project is intended for public reuse.
